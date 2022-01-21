@@ -4,14 +4,14 @@ export default function middleware(req) {
   const { pathname } = req.nextUrl; // get pathname of request (e.g. /blog-slug)
   const hostname = req.headers.get("host"); // get hostname of request (e.g. demo.vercel.pub)
 
-  if (hostname === "vercel.pub") {
+  if (hostname === "orvylle.com") {
     // only for demo purposes – remove this if you want to use your root domain as the landing page
-    return NextResponse.redirect("https://demo.vercel.pub");
+    return NextResponse.redirect("https://demo.orvylle.com");
   }
 
   const currentHost =
     process.env.NODE_ENV === "production" && process.env.VERCEL === "1"
-      ? hostname.replace(`.vercel.pub`, "")
+      ? hostname.replace(`.orvylle.com`, "")
       : hostname.replace(`.localhost:3000`, "");
 
   if (pathname.startsWith(`/_sites`)) {

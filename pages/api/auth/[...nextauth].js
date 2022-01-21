@@ -1,23 +1,19 @@
 import NextAuth from "next-auth";
-import TwitterProvider from "next-auth/providers/twitter";
+import SpotifyProvider from "next-auth/providers/spotify";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 
 export default NextAuth({
   providers: [
-    TwitterProvider({
-      clientId: process.env.TWITTER_ID,
-      clientSecret: process.env.TWITTER_SECRET,
+    SpotifyProvider({
+      clientId: process.env.SPOTIFY_ID,
+      clientSecret: process.env.SPOTIFY_SECRET,
       profile(profile) {
         return {
-          id: profile.id_str,
-          name: profile.name,
-          username: profile.screen_name,
-          email: profile.email && profile.email != "" ? profile.email : null,
-          image: profile.profile_image_url_https.replace(
-            /_normal\.(jpg|png|gif)$/,
-            ".$1"
-          ),
+          id: profile.id,
+          name: profile.display_name,
+          email: profile.email,
+          image: profile.images?.[0]?.url,
         };
       },
     }),

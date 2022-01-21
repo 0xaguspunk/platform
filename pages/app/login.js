@@ -66,7 +66,7 @@ export default function Login() {
             disabled={loading}
             onClick={() => {
               setLoading(true);
-              signIn("twitter");
+              signIn("spotify");
             }}
             className={`${
               loading ? "cursor-not-allowed bg-[#1da0f285]" : "bg-[#1da1f2]"
