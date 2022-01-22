@@ -80,21 +80,18 @@ export default function AppIndex() {
                 className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-r-lg placeholder-gray-400"
                 type="text"
                 name="name"
-                placeholder="Site Name"
+                placeholder="Token Id"
               />
             </div>
             <div className="border border-gray-700 rounded-lg flex flex-start items-center">
               <span className="pl-5 pr-1">🪧</span>
               <input
-                className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-l-lg placeholder-gray-400"
+                className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-r-lg placeholder-gray-400"
                 type="text"
                 name="subdomain"
-                placeholder="Subdomain"
+                placeholder="Contract Address"
                 onInput={(e) => setSubdomain(e.target.value)}
               />
-              <span className="px-5 bg-gray-100 h-full flex items-center rounded-r-lg border-l border-gray-600">
-                .orvylle.com
-              </span>
             </div>
             {error && (
               <p className="px-5 text-left text-red-500">
@@ -166,7 +163,7 @@ export default function AppIndex() {
                         />
                       </div>
                       <div className="relative p-10">
-                        <h2 className="font-cal text-3xl">{site.name}</h2>
+                        <h2 className="font-cal text-3xl">Token Id: {site.name}</h2>
                         <p className="text-base my-5 line-clamp-3">
                           {site.description}
                         </p>

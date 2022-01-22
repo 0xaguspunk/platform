@@ -6,7 +6,7 @@ export default function middleware(req) {
   console.log('request', req);
   if (hostname === "orvylle.com") {
     // only for demo purposes – remove this if you want to use your root domain as the landing page
-    return NextResponse.redirect("https://demo.orvylle.com");
+    return NextResponse.redirect("https://app.orvylle.com");
   }
 
   const currentHost =
