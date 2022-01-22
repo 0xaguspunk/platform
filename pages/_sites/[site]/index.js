@@ -20,7 +20,7 @@ export default function Index(props) {
     description: data.description,
     ogUrl: data.customDomain
       ? data.customDomain
-      : `https://${data.subdomain}.vercel.pub`,
+      : `https://${data.subdomain}.orvylle.com`,
     ogImage: data.image,
     logo: "/logo.png",
   };

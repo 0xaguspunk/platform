@@ -7,7 +7,7 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   return (
-    <PlausibleProvider domain="demo.vercel.pub">
+    <PlausibleProvider domain="demo.orvylle.com">
       <SessionProvider session={session}>
         <Component {...pageProps} />
       </SessionProvider>

@@ -115,7 +115,7 @@ export default function Post() {
       method: "POST",
     });
     await response.json();
-    router.push(`https://${post.site.subdomain}.vercel.pub/${post.slug}`);
+    router.push(`https://${post.site.subdomain}.orvylle.com/${post.slug}`);
   };
 
   if (isValidating)

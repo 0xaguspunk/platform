@@ -34,7 +34,7 @@ export default function Post(props) {
   const meta = {
     title: data.title,
     description: data.description,
-    ogUrl: `https://${data.site.subdomain}.vercel.pub/${data.slug}`,
+    ogUrl: `https://${data.site.subdomain}.orvylle.com/${data.slug}`,
     ogImage: data.image,
     logo: "/logo.png",
   };

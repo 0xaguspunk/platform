@@ -27,7 +27,7 @@ export default function AppIndex() {
       if (available) {
         setError(null);
       } else {
-        setError(`${debouncedSubdomain}.vercel.pub`);
+        setError(`${debouncedSubdomain}.orvylle.com`);
       }
     }
   }, [debouncedSubdomain]);
@@ -93,7 +93,7 @@ export default function AppIndex() {
                 onInput={(e) => setSubdomain(e.target.value)}
               />
               <span className="px-5 bg-gray-100 h-full flex items-center rounded-r-lg border-l border-gray-600">
-                .vercel.pub
+                .orvylle.com
               </span>
             </div>
             {error && (
@@ -172,11 +172,11 @@ export default function AppIndex() {
                         </p>
                         <a
                           onClick={(e) => e.stopPropagation()}
-                          href={`https://${site.subdomain}.vercel.pub`}
+                          href={`https://${site.subdomain}.orvylle.com`}
                           target="_blank"
                           className="font-cal px-3 py-1 tracking-wide rounded bg-gray-200 text-gray-600 absolute bottom-5 left-10 whitespace-nowrap"
                         >
-                          {site.subdomain}.vercel.pub ↗
+                          {site.subdomain}.orvylle.com ↗
                         </a>
                       </div>
                     </div>
