@@ -16,6 +16,8 @@ export default async function addDomain(req, res) {
   );
 
   const data = await response.json();
+  console.log('add domain response', response);
+  console.log('add domain data', data);
 
   if (data.error?.code == "forbidden") {
     res.status(403).end(); // domain is already owned by another team but you can request delegation to access it

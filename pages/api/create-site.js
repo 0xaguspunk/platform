@@ -21,5 +21,6 @@ export default async function CreateSite(req, res) {
       },
     },
   });
+  console.log('create site', response);
   res.status(200).json({ siteId: response.id });
 }

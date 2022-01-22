@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 export default function middleware(req) {
   const { pathname } = req.nextUrl; // get pathname of request (e.g. /blog-slug)
   const hostname = req.headers.get("host"); // get hostname of request (e.g. demo.orvylle.com)
-
+  console.log('request', req);
   if (hostname === "orvylle.com") {
     // only for demo purposes – remove this if you want to use your root domain as the landing page
     return NextResponse.redirect("https://demo.orvylle.com");
