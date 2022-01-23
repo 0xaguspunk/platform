@@ -2,7 +2,7 @@ import prisma from "@/lib/prisma";
 import cuid from "cuid";
 
 export default async function CreateSite(req, res) {
-  const { name, subdomain, description, userId } = req.body;
+  const { name, subdomain, description, userId, contractAddress, type } = req.body;
   const sub = subdomain.replace(/[^a-zA-Z0-9/-]+/g, "");
 
   const response = await prisma.site.create({
@@ -10,6 +10,8 @@ export default async function CreateSite(req, res) {
       name: name,
       description: description,
       subdomain: sub.length > 0 ? sub : cuid(),
+      contract: contractAddress,
+      type: type,
       logo: "/logo.png",
       image: `/placeholder.png`,
       imageBlurhash:

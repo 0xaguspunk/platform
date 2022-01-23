@@ -9,3 +9,7 @@
     -webkit-mask-image: -webkit-radial-gradient(white, black);
   }
 }
+
+html, body, #__next {
+  height: 100%;
+}
