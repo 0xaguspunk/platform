@@ -57,28 +57,6 @@ export default function Layout({ siteId, children }) {
             </div>
           </div>
         </div>
-        {rootPage && (
-          <div className="absolute left-0 right-0 top-16 flex justify-center items-center font-cal space-x-16 border-b bg-white border-gray-200">
-            <Link href="/">
-              <a
-                className={`border-b-2 ${
-                  tab == "" ? "border-black" : "border-transparent"
-                } py-3`}
-              >
-                My Sites
-              </a>
-            </Link>
-            <Link href="/settings">
-              <a
-                className={`border-b-2 ${
-                  tab == "settings" ? "border-black" : "border-transparent"
-                } py-3`}
-              >
-                Settings
-              </a>
-            </Link>
-          </div>
-        )}
         {sitePage && (
           <div className="absolute left-0 right-0 top-16 font-cal border-b bg-white border-gray-200">
             <div className="flex justify-between items-center space-x-16 max-w-screen-xl mx-auto px-10 sm:px-20 h-10">

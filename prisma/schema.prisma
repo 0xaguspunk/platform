@@ -71,12 +71,13 @@ model Site {
   id            String  @id @default(cuid())
   name          String?
   contract      String?
-  tokenId       String?
-  type          String?
   description   String? @db.Text
-  logo          String?
-  image         String? @db.Text
-  imageBlurhash String? @db.LongText
+  logoUrl       String?
+  imageUrl      String?
+  openSeaLink   String?
+  discordLink   String?
+  twitterLink   String?
+  mainSiteLink  String?
   subdomain     String? @unique
   customDomain  String? @unique
   createdAt     DateTime     @default(now())

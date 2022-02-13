@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import Layout from "@/components/app/Layout";
-import BlurImage from "@/components/BlurImage";
 import Modal from "@/components/Modal";
 import LoadingDots from "@/components/app/loading-dots";
 import Link from "next/link";
@@ -177,14 +176,6 @@ export default function AppIndex() {
                 <Link href={`/site/${site.id}`} key={site.id}>
                   <a>
                     <div className="flex flex-col md:flex-row md:h-60 rounded-lg overflow-hidden border border-gray-200">
-                      <div className="relative w-full h-60 md:h-auto md:w-1/3 md:flex-none">
-                        <BlurImage
-                          src={site.image}
-                          layout="fill"
-                          objectFit="cover"
-                          alt={site.name}
-                        />
-                      </div>
                       <div className="relative p-10">
                         <h2 className="font-cal text-3xl">{site.name}</h2>
                         <h3 className="font-cal text-lg">Type: {site.type}</h3>

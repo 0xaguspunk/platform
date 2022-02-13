@@ -11,8 +11,6 @@ export default async function SaveSiteSettings(req, res) {
       name: data.name,
       description: data.description,
       subdomain: subdomain.length > 0 ? subdomain : data.currentSubdomain,
-      image: data.image,
-      imageBlurhash: data.imageBlurhash,
     },
   });
 

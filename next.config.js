@@ -6,7 +6,8 @@ module.exports = {
       "pbs.twimg.com",
       "api.producthunt.com",
       "api.producthunt.com",
-      "i.scdn.co"
+      "i.scdn.co",
+      "cdn.discordapp.com"
     ],
   },
 };
