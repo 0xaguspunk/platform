@@ -46,6 +46,8 @@ export default function SiteSettings() {
       setData({
         id: settings.id,
         name: settings.name,
+        contract: settings.contract,
+        imageUrl: settings.imageUrl,
         description: settings.description,
         subdomain: settings.subdomain,
         customDomain: settings.customDomain,
@@ -112,7 +114,7 @@ export default function SiteSettings() {
         <h1 className="font-cal text-5xl mb-12">Site Settings</h1>
         <div className="mb-28 flex flex-col space-y-12">
           <div className="flex flex-col space-y-6">
-            <h2 className="font-cal text-2xl">Token Id</h2>
+            <h2 className="font-cal text-2xl">Name</h2>
             <div className="border border-gray-700 rounded-lg overflow-hidden flex items-center max-w-lg">
               <input
                 className="w-full px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none placeholder-gray-400"
@@ -122,6 +124,36 @@ export default function SiteSettings() {
                 value={data?.name}
                 onInput={(e) =>
                   setData((data) => ({ ...data, name: e.target.value }))
+                }
+              />
+            </div>
+          </div>
+          <div className="flex flex-col space-y-6">
+            <h2 className="font-cal text-2xl">Contract Address</h2>
+            <div className="border border-gray-700 rounded-lg overflow-hidden flex items-center max-w-lg">
+              <input
+                className="w-full px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none placeholder-gray-400"
+                type="text"
+                name="name"
+                placeholder="Contract address"
+                value={data?.contract}
+                onInput={(e) =>
+                  setData((data) => ({ ...data, contract: e.target.value }))
+                }
+              />
+            </div>
+          </div>
+          <div className="flex flex-col space-y-6">
+            <h2 className="font-cal text-2xl">Image URL</h2>
+            <div className="border border-gray-700 rounded-lg overflow-hidden flex items-center max-w-lg">
+              <input
+                className="w-full px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none placeholder-gray-400"
+                type="text"
+                name="name"
+                placeholder="Image URL"
+                value={data?.imageUrl}
+                onInput={(e) =>
+                  setData((data) => ({ ...data, imageUrl: e.target.value }))
                 }
               />
             </div>
@@ -143,7 +175,7 @@ export default function SiteSettings() {
             </div>
           </div>
           <div className="flex flex-col space-y-6">
-            <h2 className="font-cal text-2xl">Contract Address</h2>
+            <h2 className="font-cal text-2xl">Subdomain</h2>
             <div className="border border-gray-700 rounded-lg flex items-center max-w-lg">
               <input
                 className="w-1/2 px-5 py-3 font-cal text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-l-lg placeholder-gray-400"

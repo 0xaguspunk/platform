@@ -53,7 +53,7 @@ export default function AppIndex() {
         subdomain: e.target.subdomain.value,
         description: e.target.description.value,
         contractAddress: e.target.contractAddress.value,
-        type: e.target.type.value,
+        imageUrl: e.target.imageUrl.value,
       }),
     });
     if (res.ok) {
@@ -76,7 +76,7 @@ export default function AppIndex() {
           <h2 className="font-cal text-2xl mb-6">Create a New Site</h2>
           <div className="grid gap-y-5 w-5/6 mx-auto">
             <div className="border border-gray-700 rounded-lg flex flex-start items-center">
-              <span className="pl-5 pr-1">📌</span>
+              <span className="pl-5 pr-1">💎</span>
               <input
                 className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-r-lg placeholder-gray-400"
                 type="text"
@@ -94,12 +94,12 @@ export default function AppIndex() {
               />
             </div>
             <div className="border border-gray-700 rounded-lg flex flex-start items-center">
-              <span className="pl-5 pr-1">🪄</span>
+              <span className="pl-5 pr-1">🏞</span>
               <input
                 className="w-full px-5 py-3 text-gray-700 bg-white border-none focus:outline-none focus:ring-0 rounded-none rounded-r-lg placeholder-gray-400"
                 type="text"
-                name="type"
-                placeholder="Site type (auction, redeem, mint)"
+                name="imageUrl"
+                placeholder="Image URL"
               />
             </div>
             <div className="border border-gray-700 rounded-lg flex flex-start items-center">

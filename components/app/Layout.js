@@ -8,14 +8,10 @@ import Loader from "./Loader";
 import useRequireAuth from "../../lib/useRequireAuth";
 
 export default function Layout({ siteId, children }) {
-  const title = "Manifold SPAs";
+  const title = "Manifold Mint Sites";
   const logo = "/favicon.ico";
   const router = useRouter();
   const sitePage = router.pathname.startsWith("/app/site/[id]");
-  const rootPage = !sitePage;
-  const tab = rootPage
-    ? router.asPath.split("/")[1]
-    : router.asPath.split("/")[3];
 
   const session = useRequireAuth();
   if (!session) return <Loader />;
